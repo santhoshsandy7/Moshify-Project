@@ -5,11 +5,13 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+/* Typography */
 
 /* 62.5 % 16 = 10 */
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
@@ -52,5 +54,33 @@ p {
   }
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+.Link-arrow {
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.Link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+
+.Link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .Link-arrow {
+    font-size: 1.5rem;
   }
 }
