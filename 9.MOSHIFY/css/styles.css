@@ -482,9 +482,3 @@ a {
     margin-left: 6rem;
   }
 }
-
-@media screen and (min-width: 1024px) {
-  .testimonial .quote {
-    margin-top: 16rem;
-  }
-}
