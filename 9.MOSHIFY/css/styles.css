@@ -16,7 +16,6 @@
 }
 
 /* Typography */
-
 /* 62.5 % 16 = 10 */
 html {
   font-size: 62.5%;
@@ -68,7 +67,6 @@ p {
 }
 
 /* Links */
-
 a {
   text-decoration: none;
 }
@@ -96,7 +94,6 @@ a {
 }
 
 /* Badges */
-
 .badge {
   border-radius: 20px;
   color: #fff;
@@ -132,7 +129,6 @@ a {
 }
 
 /* Lists */
-
 .list {
   color: var(--color-headings);
   padding-left: 0;
@@ -161,14 +157,22 @@ a {
 }
 
 /* Icons */
-
 .icon {
   width: 40px;
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
@@ -181,8 +185,11 @@ a {
   width: 64px;
 }
 
-/* Buttons */
+.icon-container--accent {
+  background: var(--color-accent);
+}
 
+/* Buttons */
 .btn {
   font-size: 1.8rem;
   text-align: center;
@@ -246,7 +253,6 @@ a {
 }
 
 /* Inputs */
-
 .input {
   border-radius: var(--border-raidus);
   border: 2px solid var(--color-border);
@@ -283,7 +289,6 @@ a {
 }
 
 /* Cards */
-
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
@@ -307,8 +312,8 @@ a {
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
-/* Plans */
 
+/* Plans */
 .plan__name {
   font-size: 2.4rem;
   color: #fff;
@@ -399,7 +404,7 @@ a {
   content: close-quote;
 }
 
-.quote--author {
+.quote__author {
   font-size: 3rem;
   font-weight: 500;
   font-style: normal;
@@ -445,5 +450,41 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 4rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonial .quote {
+    margin-top: 16rem;
   }
 }
